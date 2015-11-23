@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Youtube-->
+        <scene sceneID="Ylp-uk-3ce">
+            <objects>
+                <viewController id="kN0-el-L27" customClass="Youtube" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hLx-WN-DGz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1d6-ES-1Vu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2i8-tP-6FS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="pOc-CQ-dPm">
+                                <rect key="frame" x="30" y="128" width="260" height="295"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqI-Qu-AKe">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="125"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="4AK-1K-h7v"/>
+                                            <constraint firstAttribute="height" constant="125" id="iWd-uf-Cxu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Films" image="Films1">
+                                            <color key="titleColor" red="0.94776302576065063" green="0.28280580043792725" blue="0.16007006168365479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vvM-pJ-rsI" kind="push" id="Tbm-61-dd1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqi-pe-c2y">
+                                        <rect key="frame" x="0.0" y="170" width="260" height="125"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="We0-18-fKj"/>
+                                            <constraint firstAttribute="height" constant="125" id="p8l-za-BCL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Music" image="Video_music">
+                                            <color key="titleColor" red="0.94776302576065063" green="0.28280580043792725" blue="0.16007006168365479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vvM-pJ-rsI" kind="push" id="pPq-Wa-Gpm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.4943696118" green="0.58248902400000002" blue="0.9846754808" alpha="0.80401400860000005" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pOc-CQ-dPm" firstAttribute="centerX" secondItem="2i8-tP-6FS" secondAttribute="centerX" id="bTW-jB-iH3"/>
+                            <constraint firstItem="hLx-WN-DGz" firstAttribute="bottom" secondItem="pOc-CQ-dPm" secondAttribute="top" multiplier="0.5" id="wrP-NP-VPO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Youtube" id="VTa-qj-kRK">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Znf-DE-fZY">
+                            <connections>
+                                <action selector="btnBack:" destination="kN0-el-L27" id="fwu-if-JuT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgE-8C-aWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24" y="134"/>
+        </scene>
+        <!--Youtube Play-->
+        <scene sceneID="b22-CB-wMt">
+            <objects>
+                <viewController id="vvM-pJ-rsI" customClass="YoutubePlay" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VC0-X5-NVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="LWc-VP-aIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KKA-29-DYh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuS-uk-WEo" customClass="YTPlayerView">
+                                <rect key="frame" x="-4" y="144" width="328" height="336"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT2-3M-hXt">
+                                <rect key="frame" x="16" y="64" width="288" height="80"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.34753585149999999" green="0.681625649" blue="0.9846754808" alpha="0.80401400860000005" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uT2-3M-hXt" firstAttribute="top" secondItem="VC0-X5-NVZ" secondAttribute="bottom" id="CBI-B2-s13"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uT2-3M-hXt" secondAttribute="trailing" id="Mhf-C9-j6x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SuS-uk-WEo" secondAttribute="trailing" constant="-20" id="Ulw-k0-lr1"/>
+                            <constraint firstItem="SuS-uk-WEo" firstAttribute="leading" secondItem="KKA-29-DYh" secondAttribute="leadingMargin" constant="-20" id="VJB-24-XNS"/>
+                            <constraint firstItem="SuS-uk-WEo" firstAttribute="bottom" secondItem="LWc-VP-aIn" secondAttribute="top" id="dYk-w7-ZbC"/>
+                            <constraint firstItem="SuS-uk-WEo" firstAttribute="top" secondItem="uT2-3M-hXt" secondAttribute="bottom" id="g4s-Se-59f"/>
+                            <constraint firstItem="SuS-uk-WEo" firstAttribute="top" secondItem="VC0-X5-NVZ" secondAttribute="bottom" constant="80" id="rs5-dG-xWh"/>
+                            <constraint firstItem="uT2-3M-hXt" firstAttribute="leading" secondItem="KKA-29-DYh" secondAttribute="leadingMargin" id="zbR-Wl-COc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ILD-kJ-WXH"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="youtubePlay" destination="SuS-uk-WEo" id="OL3-bJ-Ujq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZs-om-aAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YBz-Et-61u">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationYoutube" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bz2-Er-fZs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Bb-8J-iTc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kN0-el-L27" kind="relationship" relationship="rootViewController" id="0mo-c6-UZX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSv-FF-FMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Films1" width="128" height="128"/>
+        <image name="Video_music" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pPq-Wa-Gpm"/>
+    </inferredMetricsTieBreakers>
+</document>

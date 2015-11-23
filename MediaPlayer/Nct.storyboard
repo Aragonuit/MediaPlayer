@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Nhac Cua Tui-->
+        <scene sceneID="Wo4-j5-zn1">
+            <objects>
+                <viewController id="ams-2w-3yD" customClass="MediaNct" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6jQ-Nk-lwW"/>
+                        <viewControllerLayoutGuide type="bottom" id="hsX-Ew-Hxq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVy-9v-eG1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vw5-ZU-MqE">
+                                <rect key="frame" x="30" y="85" width="260" height="375"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeR-Rq-pHa">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="125"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="8tm-Hv-Uc8"/>
+                                            <constraint firstAttribute="height" constant="125" id="oEJ-jC-sjP"/>
+                                        </constraints>
+                                        <state key="normal" title="The Songs" image="IconMusic"/>
+                                        <connections>
+                                            <segue destination="0IV-fn-rea" kind="push" id="1hk-4T-g5O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JT8-Zz-HyB">
+                                        <rect key="frame" x="0.0" y="125" width="260" height="125"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="C5Y-UW-SgX"/>
+                                            <constraint firstAttribute="height" constant="125" id="j61-h2-E06"/>
+                                        </constraints>
+                                        <state key="normal" title="Albums" image="music (7)"/>
+                                        <connections>
+                                            <segue destination="0IV-fn-rea" kind="push" id="bJ3-6q-VAY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-eA-XlE">
+                                        <rect key="frame" x="0.0" y="250" width="260" height="125"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="R6i-lL-PZr"/>
+                                            <constraint firstAttribute="height" constant="125" id="mq1-l0-53u"/>
+                                        </constraints>
+                                        <state key="normal" title="singer" image="Singer"/>
+                                        <connections>
+                                            <segue destination="0IV-fn-rea" kind="push" id="NcJ-pf-Ndr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.49567694880000002" green="0.76383774869999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vw5-ZU-MqE" firstAttribute="centerX" secondItem="KVy-9v-eG1" secondAttribute="centerX" id="eaY-dS-te6"/>
+                            <constraint firstItem="6jQ-Nk-lwW" firstAttribute="bottom" secondItem="Vw5-ZU-MqE" secondAttribute="top" multiplier="0.75" id="wuW-W4-hji"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nhac Cua Tui" id="TW6-wW-gRb">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="gAO-Ea-fEC">
+                            <connections>
+                                <action selector="btnBack:" destination="ams-2w-3yD" id="BkJ-Xg-pkz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddw-MK-6GG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="304"/>
+        </scene>
+        <!--ScreenPlay-->
+        <scene sceneID="gLh-ZM-N5t">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayAudio" referencedIdentifier="ScreenPlay" id="0IV-fn-rea" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1dV-Dp-RLC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4UN-hT-KI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.5" y="294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ulG-IH-c56">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationNct" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yfw-jX-gBU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Psb-Zt-hxc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ams-2w-3yD" kind="relationship" relationship="rootViewController" id="5KR-fK-R14"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqY-Pm-PGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="311"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IconMusic" width="128" height="128"/>
+        <image name="Singer" width="128" height="128"/>
+        <image name="music (7)" width="128" height="128"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bJ3-6q-VAY"/>
+    </inferredMetricsTieBreakers>
+</document>
